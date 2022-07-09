@@ -1,4 +1,4 @@
-import { getByRole, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Button from "../index";
 
