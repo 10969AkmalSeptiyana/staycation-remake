@@ -1,5 +1,5 @@
-import React from "react";
+import Header from "components/Header/Header";
 
 export default function LandingPage() {
-  return <h1>LandingPage</h1>;
+  return <Header />;
 }
