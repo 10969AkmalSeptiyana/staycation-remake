@@ -1,45 +1,41 @@
+import { Container, Nav, Navbar } from "react-bootstrap";
+
 import Logo from "components/Logo/Logo";
 import Button from "components/ui/Button";
-import { ReactComponent as MenuToggle } from "assets/images/menu-toggle.svg";
 
 export default function Header() {
   return (
     <header>
-      <nav className="navbar navbar-expand-sm">
-        <div className="container">
+      <Navbar expand="lg">
+        <Container>
           <Logo />
-          <Button
-            className="d-sm-none"
-            style={{ border: 0, background: "transparent" }}
-          >
-            <MenuToggle />
-          </Button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="nav-list ms-auto">
               <li className="nav-item active">
                 <Button className="nav-link" type="link" href="/">
                   Home
                 </Button>
               </li>
               <li className="nav-item">
-                <Button className="nav-link" type="link" href="/explore">
+                <Button className="nav-link" type="link" href="/">
                   Explore
                 </Button>
               </li>
               <li className="nav-item">
-                <Button className="nav-link" type="link" href="/stories">
+                <Button className="nav-link" type="link" href="/">
                   Stories
                 </Button>
               </li>
               <li className="nav-item">
-                <Button className="nav-link" type="link" href="/contact">
+                <Button className="nav-link" type="link" href="/">
                   Contact Us
                 </Button>
               </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
   );
 }

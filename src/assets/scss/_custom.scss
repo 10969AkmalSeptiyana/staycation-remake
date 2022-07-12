@@ -1,0 +1,114 @@
+// override
+$font-family-base: "Poppins", sans-serif;
+$container-max-widths: (
+  sm: 33.75rem,
+  md: 45rem,
+  lg: 60rem,
+  xl: 71.25rem,
+  xxl: 80rem,
+);
+$gray-900: #152c5b;
+$primary: #1089ff;
+
+@import "~bootstrap/scss/bootstrap";
+$grays: (
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+);
+
+// custom style
+header {
+  // border-bottom: .0625rem solid $gray-200;
+  width: 100%;
+  position: relative;
+  margin-bottom: 4.375rem;
+
+  .navbar {
+    @media screen and (min-width: 45rem) {
+      height: 5rem;
+    }
+
+    .navbar-nav {
+      li.nav-item {
+        &.active {
+          a.nav-link {
+            color: $primary;
+          }
+        }
+        a {
+          &.nav-link {
+            letter-spacing: 0.0625rem;
+            color: $gray-900;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .nav-item:not(:last-child) {
+        padding-right: 0.625rem;
+      }
+    }
+  }
+}
+
+.btn-shadow {
+  box-shadow: 0 0.5rem 0.9375rem rgba($primary, 0.3);
+}
+
+.hero-title {
+  font-family: "Lora", serif;
+  font-size: 33px;
+  @media screen and (min-width: 45rem) {
+    font-size: 47px;
+  }
+}
+
+.hero-info {
+  max-width: 200px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  gap: 30px;
+  padding: 15px 32px;
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.1);
+  @media screen and (min-width: 36rem) {
+    flex-direction: row;
+    max-width: 100%;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    @media screen and (min-width: 36rem) {
+      margin: 0;
+    }
+  }
+
+  .border {
+    width: 126px;
+    height: 1px;
+    background-color: #ddd;
+
+    @media screen and (min-width: 36rem) {
+      width: 1px;
+      height: 50px;
+    }
+  }
+}
+
+.banner {
+  margin-top: 100px;
+  @media screen and (min-width: 75rem) {
+    margin-top: 0;
+  }
+}
