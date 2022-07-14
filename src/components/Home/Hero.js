@@ -1,7 +1,14 @@
 import ImageHero from "assets/images/banner.png";
 import Button from "components/ui/Button";
 
-export default function Hero() {
+export default function Hero({ refMostPicked }) {
+  function showMostPicked() {
+    window.scrollTo({
+      top: refMostPicked.current.offsetTop - 30,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <section className="container">
       <div className="row align-items-center justify-content-between">
@@ -21,6 +28,7 @@ export default function Hero() {
             hasShadow
             isPrimary
             style={{ padding: "12px 40px", fontSize: 18 }}
+            onClick={showMostPicked}
           >
             Show Me Now
           </Button>

@@ -21,8 +21,8 @@
       "name": "Ocean Land",
       "type": "House Tour",
       "imageUrl": "/images/image-mostpicked-2.jpg",
-      "country": "Itaborai",
-      "city": "Brazil",
+      "country": "Brazil",
+      "city": "Itaborai",
       "price": "70",
       "unit": "night"
     },
@@ -45,6 +45,54 @@
       "city": "Ain Beida",
       "price": "40",
       "unit": "night"
+    }
+  ],
+
+  "hotels": [
+    {
+      "_id": "2236752f51ce432ba9202036d93958ca",
+      "name": "Cashville",
+      "type": "Hotel",
+      "imageUrl": "/images/image-hotel-1.jpg",
+      "country": "Indonesia",
+      "city": "Kemang",
+      "rating": "5.0"
+    },
+    {
+      "_id": "3d6d6d076cbf48e7ab89c4676285b7d9",
+      "name": "Emerald Dune",
+      "type": "Hotel",
+      "imageUrl": "/images/image-hotel-2.jpg",
+      "country": "Indonesia",
+      "city": "Bogor",
+      "rating": "4.9"
+    },
+    {
+      "_id": "e6ace5481322400ea9bbbebfbc14b91f",
+      "name": "Green Park",
+      "type": "Hotel",
+      "imageUrl": "/images/image-hotel-3.jpg",
+      "country": "Indonesia",
+      "city": "Tangerang",
+      "rating": "4.8"
+    },
+    {
+      "_id": "44b6c45132b24e7ba58764da49fa9046",
+      "name": "Silver Rain",
+      "type": "Hotel",
+      "imageUrl": "/images/image-hotel-4.jpg",
+      "country": "Indonesia",
+      "city": "Bandung",
+      "rating": "4.8"
+    },
+    {
+      "_id": "4742dd533afa4758bfb6bc2ed376ed4a",
+      "name": "Podo Wae",
+      "type": "Hotel",
+      "imageUrl": "/images/image-hotel-5.jpg",
+      "country": "Indonesia",
+      "city": "Majalengka",
+      "rating": "4.7"
     }
   ],
   "categories": [

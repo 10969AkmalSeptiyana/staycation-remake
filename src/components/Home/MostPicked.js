@@ -1,9 +1,9 @@
 import { ReactComponent as IconLocation } from "assets/images/location.svg";
 import Button from "components/ui/Button";
 
-export default function MostPicked({ data }) {
+export default function MostPicked({ data, refMostPicked }) {
   return (
-    <section className="container">
+    <section className="container" ref={refMostPicked}>
       <h4 className="mb-3">Most Picked</h4>
       <div className="container-grid">
         {data.map((item) => {
