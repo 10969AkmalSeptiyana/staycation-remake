@@ -1,3 +1,4 @@
+import { ReactComponent as StarIcon } from "assets/images/star.svg";
 import Button from "components/ui/Button";
 
 export default function Hotels({ data }) {
@@ -10,7 +11,10 @@ export default function Hotels({ data }) {
             return (
               <div className={`item-${index}`} key={item._id}>
                 <div className="card card-featured">
-                  <div className="star"></div>
+                  <div className="star">
+                    <StarIcon />
+                    {item.rating}
+                  </div>
                   <figure className="img-wrapper">
                     <img
                       src={item.imageUrl}

@@ -312,5 +312,22 @@ section {
     h5 {
       color: $white;
     }
+
+    &.card-featured {
+      .star {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 5;
+        color: #ffcc47;
+        display: flex;
+        align-items: center;
+        column-gap: 3px;
+        font-size: 0.8125rem;
+        padding: 0.25rem 0.5rem;
+        background-color: rgba($color: #3e3e46, $alpha: 0.7);
+        border-radius: 25px;
+      }
+    }
   }
 }
