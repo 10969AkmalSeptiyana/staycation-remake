@@ -4,8 +4,10 @@ import Header from "components/Header/Header";
 import Hero from "components/Home/Hero";
 import MostPicked from "components/Home/MostPicked";
 
-import dataLandingPage from "json/landingPage.json";
 import Hotels from "components/Home/Hotels";
+import Categories from "components/Categories/Categories";
+
+import dataLandingPage from "json/landingPage.json";
 
 export default function LandingPage() {
   const refMostPicked = useRef(null);
@@ -13,12 +15,15 @@ export default function LandingPage() {
   return (
     <>
       <Header />
-      <Hero data={dataLandingPage.hero} refMostPicked={refMostPicked} />
-      <MostPicked
-        data={dataLandingPage.mostPicked}
-        refMostPicked={refMostPicked}
-      />
-      <Hotels data={dataLandingPage.hotels} />
+      <main>
+        <Hero data={dataLandingPage.hero} refMostPicked={refMostPicked} />
+        <MostPicked
+          data={dataLandingPage.mostPicked}
+          refMostPicked={refMostPicked}
+        />
+        <Hotels data={dataLandingPage.hotels} />
+        <Categories data={dataLandingPage.categories} />
+      </main>
     </>
   );
 }

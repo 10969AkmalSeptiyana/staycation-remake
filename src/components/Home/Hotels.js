@@ -26,7 +26,7 @@ export default function Hotels({ data }) {
                     <Button
                       type="link"
                       className="stretched-link d-block fw-normal"
-                      href={`/properties/`}
+                      href={`/properties/${item._id}`}
                     >
                       <h5>{item.name}</h5>
                     </Button>
