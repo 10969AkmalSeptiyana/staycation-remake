@@ -4,7 +4,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import Logo from "components/Logo/Logo";
 import Button from "components/ui/Button";
 
-export default function Header(props) {
+export default function Header() {
   const location = useLocation();
   const getNavLinkClass = (path) => {
     return location.pathname === path ? "active" : "";
