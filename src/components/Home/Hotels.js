@@ -1,4 +1,4 @@
-import { ReactComponent as StarIcon } from "assets/images/star.svg";
+import { ReactComponent as StarIcon } from "assets/images/star-rating.svg";
 import Button from "components/ui/Button";
 
 export default function Hotels({ data }) {

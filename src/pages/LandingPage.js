@@ -6,6 +6,8 @@ import MostPicked from "components/Home/MostPicked";
 
 import Hotels from "components/Home/Hotels";
 import Categories from "components/Categories/Categories";
+import Testimonial from "components/Testimonial/Testimonial";
+import Footer from "components/Footer/Footer";
 
 import dataLandingPage from "json/landingPage.json";
 
@@ -23,7 +25,9 @@ export default function LandingPage() {
         />
         <Hotels data={dataLandingPage.hotels} />
         <Categories data={dataLandingPage.categories} />
+        <Testimonial data={dataLandingPage.testimonial} />
       </main>
+      <Footer />
     </>
   );
 }
