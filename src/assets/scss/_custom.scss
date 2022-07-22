@@ -11,6 +11,11 @@ $gray-900: #152c5b;
 $primary: #1089ff;
 $indigo: #8186d5;
 $yellow: #ffcc47;
+$red: #e74c3c;
+$teal: #1abc9c;
+$breadcrumb-active-color: $gray-900;
+$breadcrumb-divider-color: #b0b0b0;
+$breadcrumb-item-padding-x: 1rem;
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -120,7 +125,7 @@ section {
   height: 100%;
 }
 
-.container-grid {
+.custom-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
   grid-auto-rows: minmax(11.5625rem, auto);
@@ -131,10 +136,45 @@ section {
   z-index: 3;
 }
 
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(245px, auto);
+  grid-auto-flow: dense;
+  gap: 10px;
+  position: relative;
+  z-index: 3;
+
+  .item-0 {
+    grid-column-end: span 12;
+    grid-row-end: span 2;
+    @media screen and (min-width: 992px) {
+      grid-column-end: span 7;
+    }
+  }
+  .item-1 {
+    grid-column-end: span 12;
+    @media screen and (min-width: 992px) {
+      grid-column-end: span 5;
+    }
+  }
+  .item-2 {
+    grid-column-end: span 12;
+    @media screen and (min-width: 992px) {
+      grid-column-end: span 5;
+    }
+  }
+}
+
 .card {
   border: none;
   &.bordered {
     border: 0.0625rem solid $gray-200;
+    border-radius: 0.9375rem;
+    padding: 2rem 1.125rem;
+    @media screen and (min-width: 720px) {
+      padding: 3.75rem 5rem;
+    }
   }
 
   .tag {
@@ -370,6 +410,14 @@ footer {
     font-weight: 300;
     color: $gray-500;
   }
+}
+
+.text-teal {
+  color: #1abc9c;
+}
+
+label {
+  margin-bottom: 0.5rem;
 }
 
 $grays: (

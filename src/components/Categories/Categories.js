@@ -8,7 +8,7 @@ export default function Categories({ data }) {
     return (
       <section className="container" key={category._id}>
         <h4 className="mb-3 fw-medium">{category.name}</h4>
-        <div className="container-grid">
+        <div className="custom-grid">
           {category.items.map((item) => {
             return (
               <div className="item column-3 row-1" key={item._id}>
