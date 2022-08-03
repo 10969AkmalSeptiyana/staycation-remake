@@ -4,11 +4,25 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import Logo from "components/Logo/Logo";
 import Button from "components/ui/Button";
 
-export default function Header() {
+export default function Header({ isCentered }) {
   const location = useLocation();
   const getNavLinkClass = (path) => {
     return location.pathname === path ? "active" : "";
   };
+
+  if (isCentered) {
+    return (
+      <header className="spacing-sm">
+        <div className="container">
+          <div className="navbar navbar-expand navbar-light">
+            <div className="mx-auto">
+              <Logo />
+            </div>
+          </div>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <header>
