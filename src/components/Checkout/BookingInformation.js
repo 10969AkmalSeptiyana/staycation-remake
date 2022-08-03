@@ -9,7 +9,7 @@ export default function BookingInformation({
   return (
     <div className="container" style={{ marginBottom: 30 }}>
       <div className="row justify-content-center align-items-center">
-        <div className="col-5 border-right py-5" style={{ paddingRight: 80 }}>
+        <div className="col-12 col-md-5 border-right checkout-left">
           <div className="card">
             <figure className="img-wrapper" style={{ height: 270 }}>
               <img
@@ -39,7 +39,7 @@ export default function BookingInformation({
           </div>
         </div>
 
-        <div className="col-5 py-5" style={{ paddingLeft: 80 }}>
+        <div className="col-12 col-md-5 checkout-right">
           <label htmlFor="firstName">First Name</label>
           <InputText
             id="firstName"

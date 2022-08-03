@@ -11,7 +11,7 @@ export default function Payment({ data, ItemDetails, checkout, onChange }) {
   return (
     <div className="container" style={{ marginBottom: 30 }}>
       <div className="row justify-content-center align-items-center">
-        <div className="col-5 border-right py-5" style={{ paddingRight: 80 }}>
+        <div className="col-12 col-md-5 border-right py-5 checkout-left">
           <p className="mb-4">Transfer Pembayaran:</p>
           <p>Tax: {tax}</p>
           <p>Sub total: ${subTotal} USD</p>
@@ -43,7 +43,7 @@ export default function Payment({ data, ItemDetails, checkout, onChange }) {
           </div>
         </div>
 
-        <div className="col-5 py-5" style={{ paddingLeft: 80 }}>
+        <div className="col-12 col-md-5 py-5 checkout-right">
           <label htmlFor="proofPayment">Upload Bukti Transfter</label>
           <InputFile
             accept="image/*"
