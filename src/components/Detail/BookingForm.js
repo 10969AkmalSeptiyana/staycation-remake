@@ -12,6 +12,7 @@ export default function BookingForm(props) {
       date: { startDate: new Date(), endDate: new Date(), key: "selection" },
     },
   });
+  const navigate = useNavigate();
 
   const updateData = (e) => {
     setState({
@@ -24,13 +25,15 @@ export default function BookingForm(props) {
   };
 
   const isFirstRender = useRef(true);
+  const prevState = useRef(state.data);
+
   useEffect(() => {
     const { data } = state;
 
     if (isFirstRender.current) {
       isFirstRender.current = false;
     } else {
-      if (state.data.date !== data.date) {
+      if (prevState.current.date !== data.date) {
         const startDate = new Date(data.date.startDate);
         const endDate = new Date(data.date.endDate);
         const countDuration = new Date(endDate - startDate).getDate();
@@ -40,9 +43,11 @@ export default function BookingForm(props) {
             duration: countDuration,
           },
         });
+
+        prevState.current = data;
       }
 
-      if (state.data.duration !== data.duration) {
+      if (prevState.current.duration !== data.duration) {
         const startDate = new Date(data.date.startDate);
         const endDate = new Date(
           startDate.setDate(startDate.getDate() + +data.duration - 1)
@@ -57,21 +62,13 @@ export default function BookingForm(props) {
             },
           },
         });
+
+        prevState.current = data;
       }
     }
   }, [state]);
 
-  const navigate = useNavigate();
   const startBooking = () => {
-    // const { data } = state;
-    // props.startBooking({
-    //   _id: props.itemDetails._id,
-    //   duration: data.duration,
-    //   date: {
-    //     startDate: data.date.startDate,
-    //     endDate: data.date.endDate,
-    //   },
-    // });
     navigate("/checkout");
   };
 
